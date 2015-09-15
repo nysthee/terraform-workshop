@@ -1,0 +1,10 @@
+{{ if key "tutorial" }}
+<h1>The value is {{ key "tutorial" }}</h1>
+{{ else }}
+<h1>Go to Consul and enter a value for the key "tutorial"</h1>
+{{ end }}
+
+<footer>
+  <p>Last rendered at: {{ timestamp }}</p>
+  <p>I am <em>{{ with node }}{{ .Node.Address }}{{ end }}</em></p>
+</footer>
